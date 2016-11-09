@@ -1,0 +1,7 @@
+[package]
+name = "jantar_filosofos"
+version = "0.1.0"
+authors = ["Jacsongsj <jacson.g.junior@gmail.com>"]
+
+[dependencies]
+rand = "0.3"
