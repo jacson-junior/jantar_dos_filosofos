@@ -31,7 +31,7 @@ struct Filosofo {       //definicao de filosofo
 }
 
 impl Filosofo {
-    pub fn new(nome: &str, jantar: Arc<Jantar>, esquerda: usize, direita: usize) -> Filosofo {  //contrutor de filosofo
+    pub fn novo(nome: &str, jantar: Arc<Jantar>, esquerda: usize, direita: usize) -> Filosofo {  //contrutor de filosofo
         Filosofo {
             nome: nome.to_owned(),
             jantar: jantar,
@@ -80,11 +80,11 @@ fn main() {
         garfos: vec![Mutex::new(()), Mutex::new(()), Mutex::new(()), Mutex::new(()), Mutex::new(())],   //inicializa os garfos
     });
     let filosofos = vec![        //inicia os filosofos
-        Filosofo::new("Sócrates", jantar.clone(), 0, 1),
-        Filosofo::new("Aristóteles", jantar.clone(), 1, 2),
-        Filosofo::new("Platão", jantar.clone(), 2, 3),
-        Filosofo::new("Descartes", jantar.clone(), 3, 4),
-        Filosofo::new("Nietzsche", jantar.clone(), 4, 0),
+        Filosofo::novo("Sócrates", jantar.clone(), 0, 1),
+        Filosofo::novo("Aristóteles", jantar.clone(), 1, 2),
+        Filosofo::novo("Platão", jantar.clone(), 2, 3),
+        Filosofo::novo("Descartes", jantar.clone(), 3, 4),
+        Filosofo::novo("Nietzsche", jantar.clone(), 4, 0),
     ];
 
     let gerenciador: Vec<_> = filosofos.into_iter() //inicia uma interação no vetor dos filosofos
